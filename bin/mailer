@@ -20,7 +20,7 @@ class Mailer
     c.desc 'Run processing email events'
     c.action do |global_options, _options, _args|
       config = YAML.load_file(global_options[:config]).deep_symbolize_keys
-      EventMailer.call(config[:events], config[:exchanges], config[:keychain])
+      EventMailer.call(config[:events], config[:exchanges], config[:keychain], config[:mailer_logo])
     end
   end
 end

@@ -4,10 +4,11 @@ require 'bunny'
 require 'ostruct'
 
 class EventMailer
-  def initialize(events, exchanges, keychain)
+  def initialize(events, exchanges, keychain, logo)
     @exchanges = exchanges
     @keychain = keychain
     @events = events
+    @logo = logo
 
     Kernel.at_exit { unlisten }
   end
@@ -99,6 +100,7 @@ class EventMailer
     end
 
     params = {
+      logo: @logo[:link],
       subject: config[:templates][language][:subject],
       template_name: config[:templates][language][:template_path],
       record: obj.record,

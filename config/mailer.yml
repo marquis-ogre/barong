@@ -88,6 +88,8 @@ events:
         subject: New Beneficiary
         template_path: new_beneficiary.en.html.erb
 
+mailer_logo:
+  link: "changeme"
   # expression example
   # - name: Session Create
   #   key: session.create
