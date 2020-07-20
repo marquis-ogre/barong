@@ -70,7 +70,7 @@ More details in [twilio configuration](https://github.com/openware/barong/blob/m
 | `barong_twilio_account_sid` | - | any string value | twilio account sid, required by configuration |
 | `barong_twilio_auth_token` | - | any string value | twilio auth token, required by configuration |
 | `barong_twilio_service_sid` | - | any string value | twilio service sid, required by configuration of `twilio_verify` policy |
-| `barong_sms_content_template` | Your verification code for Barong: `{{code}}` | any string value containing `{{code}}` | template, used in both configurations as content for SMS |
+| `barong_sms_content_template` | Your verification code for Exchange: `{{code}}` | any string value containing `{{code}}` | template, used in both configurations as content for SMS |
 
 ### Dependencies configuration (vault, redis, rabbitmq, sentry)
 | Env name | Default value | Possible values | Description |

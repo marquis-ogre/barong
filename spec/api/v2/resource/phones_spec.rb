@@ -296,7 +296,7 @@ describe 'Api::V2::Resources::Phones' do
           do_request
           expect_body.to eq(message: 'Code was sent successfully via sms')
           expect_status.to eq 201
-          expect(mock_sms.messages.last.body).to start_with('Your verification code for Barong: ')
+          expect(mock_sms.messages.last.body).to start_with('Your verification code for Exchange: ')
         end
 
         it 'sends a custom message with content before code' do
